@@ -158,6 +158,7 @@ void handleUpdate(){
       return;
     }
     digitalWrite(LEDPIN, (value == "on"));
+    server.send(200,"application/json","LED turned ON");
   }
 }
 
